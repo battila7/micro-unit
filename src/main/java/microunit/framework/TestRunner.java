@@ -17,6 +17,8 @@ public class TestRunner {
         final var testClassInstance = testClass.getConstructor().newInstance();
 
         for (final var testMethod : testMethods) {
+            System.out.println("Running test: " + testMethod.getName());
+
             testMethod.invoke(testClassInstance);
         }
     }
